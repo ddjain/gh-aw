@@ -6,6 +6,10 @@ permissions:
   issues: read
   pull-requests: read
 max-ai-credits: 5
+models:
+  default-ai-credits-pricing:
+    input: 1
+    output: 4
 engine:
   id: copilot
   model: nvidia/nemotron-3.5-lightning-30b-a3b
