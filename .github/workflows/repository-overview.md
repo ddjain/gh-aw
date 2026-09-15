@@ -38,16 +38,17 @@ directories or use MCP issue tools. Gather evidence with only these commands:
 ```sh
 git log --oneline -5
 git ls-files
-gh issue list --state open --limit 10
-gh pr list --state open --limit 10
 ```
 
-Then create the report immediately. State the evidence you used and distinguish
-facts from recommendations.
+After those commands, your final action must be exactly one call to the
+`create_issue` safe-output tool. Do not return a normal-text answer and do not
+exit before that tool call. Its title and body must be final, non-placeholder
+content. State the evidence you used and distinguish facts from recommendations.
 Include:
 
 1. A short inventory of the repository and its automation.
-2. Current issue and pull-request activity.
+2. Note that issue and pull-request activity was not inspected in this bounded
+   demonstration.
 3. Up to three practical next steps for a maintainer.
 
 Do not modify files, labels, pull requests, or existing issues. Create exactly
