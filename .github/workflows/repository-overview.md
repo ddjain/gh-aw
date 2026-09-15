@@ -32,8 +32,18 @@ safe-outputs:
 
 Create one concise issue that reports the current state of this repository.
 
-Inspect the repository contents, open issues, open pull requests, and recent
-commits. State the evidence you used and distinguish facts from recommendations.
+The repository is intentionally small. Do not search for conventional source
+directories or use MCP issue tools. Gather evidence with only these commands:
+
+```sh
+git log --oneline -5
+git ls-files
+gh issue list --state open --limit 10
+gh pr list --state open --limit 10
+```
+
+Then create the report immediately. State the evidence you used and distinguish
+facts from recommendations.
 Include:
 
 1. A short inventory of the repository and its automation.
