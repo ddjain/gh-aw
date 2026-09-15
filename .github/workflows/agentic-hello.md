@@ -2,7 +2,7 @@
 on:
   slash_command:
     name: hello
-    events: [issues, issue_comment]
+    events: [issues, issue_comment, pull_request, pull_request_comment]
 permissions:
   contents: read
 max-ai-credits: 1
