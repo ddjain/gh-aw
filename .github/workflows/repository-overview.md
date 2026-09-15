@@ -6,6 +6,18 @@ permissions:
   issues: read
   pull-requests: read
 max-ai-credits: 5
+engine:
+  id: copilot
+  model: nvidia/nemotron-3.5-lightning-30b-a3b
+  env:
+    COPILOT_MODEL: nvidia/nemotron-3.5-lightning-30b-a3b
+    COPILOT_PROVIDER_BASE_URL: https://integrate.api.nvidia.com/v1
+    COPILOT_PROVIDER_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+    COPILOT_PROVIDER_TYPE: openai
+network:
+  allowed:
+    - defaults
+    - integrate.api.nvidia.com
 safe-outputs:
   create-issue:
     max: 1
