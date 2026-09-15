@@ -40,10 +40,16 @@ git log --oneline -5
 git ls-files
 ```
 
-After those commands, your final action must be exactly one call to the
-`create_issue` safe-output tool. Do not return a normal-text answer and do not
-exit before that tool call. Its title and body must be final, non-placeholder
-content. State the evidence you used and distinguish facts from recommendations.
+After those commands, create exactly one report issue with the safe-output CLI.
+Do not try to invoke `create_issue` as a direct tool call. Instead, pipe a JSON
+object containing final `title` and `body` strings to this command:
+
+```sh
+safeoutputs create_issue .
+```
+
+Do not return a normal-text answer or exit before the command succeeds. State
+the evidence you used and distinguish facts from recommendations.
 Include:
 
 1. A short inventory of the repository and its automation.
