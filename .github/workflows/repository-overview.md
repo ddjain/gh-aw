@@ -12,11 +12,11 @@ models:
     output: 4
 engine:
   id: copilot
-  model: nvidia/nemotron-3.5-lightning-30b-a3b
+  model: openai/gpt-oss-20b
   env:
-    COPILOT_MODEL: nvidia/nemotron-3.5-lightning-30b-a3b
+    COPILOT_MODEL: openai/gpt-oss-20b
     COPILOT_PROVIDER_BASE_URL: https://integrate.api.nvidia.com/v1
-    COPILOT_PROVIDER_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+    COPILOT_PROVIDER_API_KEY: ${{ secrets.DOC_SYNC_BOT_LLM_API_KEY }}
     COPILOT_PROVIDER_TYPE: openai
 network:
   allowed:
